@@ -1,0 +1,21 @@
+.nav{
+    grid-area: app-nav;
+    background-color: #4288dd;
+
+}
+
+.item {color: white;
+}
+
+.active{
+
+}
+
+.item_link{
+    color: white;
+}
+
+
+.item_link_active{
+    color: red;
+}

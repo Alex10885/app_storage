@@ -12,21 +12,7 @@
   /*grid-gap: 10px;*/
 }
 
-.header{
-  grid-area: app-header;
-  background-color: #4288dd;
-}
 
-.header img{
-  width: 100px;
-}
 
-.nav{
-  grid-area: app-nav;
-  background-color: #4288dd;
-}
 
-.content{
-  grid-area: app-content;
-  background-color: aliceblue;
-}
+

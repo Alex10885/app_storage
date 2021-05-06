@@ -1,0 +1,5 @@
+.content{
+    grid-area: app-content;
+    background-color: aliceblue;
+}
+
