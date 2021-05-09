@@ -1,18 +1,13 @@
 import React from 'react';
-import classes from './Profile.module.css';
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "../ProfileInfo/ProfileInfo";
+import classes from "./Profile.module.css"
 
-const Profile = () =>{
-    return(
-        <div className={classes.content}>
-            <img
-                src="https://www.dayton.com/resizer/xVj42nf8cFaw2uJHAvRJiGMfwEs=/1066x600/cloudfront-us-east-1.images.arcpublishing.com/coxohio/NAJA2BSLBIA3NUJAI65RQAUK24.jpg"
-                alt="img"/>
-
-            <div>
-                ava + description
-            </div>
-            <MyPosts />
+const Profile = () => {
+    return (
+        <div>
+            <ProfileInfo />
+            <MyPosts/>
         </div>
 
     );
