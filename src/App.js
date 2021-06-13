@@ -4,16 +4,13 @@ import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 import Footer from "./components/Footer/Footer";
-import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
 import Music from "./components/Musuc/Music";
 import Settings from "./components/Settings/Settings";
 import {BrowserRouter, Route} from "react-router-dom";
-import {addMessage} from "./redux/state";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
-
-
 
     return (
         <BrowserRouter>
@@ -24,16 +21,14 @@ const App = (props) => {
                 <div className='app-wrapper-content'>
                     <Route exact path='/dialogs'
                            render={() =>
-                               <Dialogs
-                                   state={props.state.dialogsPage}
-                                   addMessage={props.addMessage}
+                               <DialogsContainer
+                                   store={props.store}
+
                                />}/>
                     <Route path='/profile'
-                           render={() =>
-                               <Profile profilePage={props.state.profilePage}
-                                        addPost={props.addPost}
-                                        updateNewPostText={props.updateNewPostText}
-                               />}/>
+                           render={() => <Profile
+                               store = {props.store}/>}
+                    />
 
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
